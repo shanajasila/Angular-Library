@@ -9,6 +9,39 @@ import { EntryComponent } from './entry/entry.component';
 import { SearchComponent } from './search/search.component';
 import { SignupComponent } from './signup/signup.component';
 import { ViewComponent } from './view/view.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { RouterModule, Routes } from '@angular/router';
+import { EditComponent } from './edit/edit.component';
+
+const myRoute:Routes=[
+  {
+    path:"",
+    component:LoginComponent
+  },
+  {
+    path:"userlogin",
+    component:UserLoginComponent
+  },
+  {
+    path:"signup",
+    component:SignupComponent
+  },
+  {
+    path:"add",
+    component:EntryComponent
+  },{
+    path:"search",
+    component:SearchComponent
+  },
+  {
+    path:"view",
+    component:ViewComponent
+  },
+  {
+    path:"edit",
+    component:EditComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -18,11 +51,14 @@ import { ViewComponent } from './view/view.component';
     EntryComponent,
     SearchComponent,
     SignupComponent,
-    ViewComponent
+    ViewComponent,
+    NavBarComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
