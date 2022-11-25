@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { EntryComponent } from './entry/entry.component';
 import { SearchComponent } from './search/search.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SearchComponent } from './search/search.component';
     LoginComponent,
     UserLoginComponent,
     EntryComponent,
-    SearchComponent
+    SearchComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
