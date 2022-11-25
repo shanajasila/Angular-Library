@@ -8,6 +8,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { EntryComponent } from './entry/entry.component';
 import { SearchComponent } from './search/search.component';
 import { SignupComponent } from './signup/signup.component';
+import { ViewComponent } from './view/view.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SignupComponent } from './signup/signup.component';
     UserLoginComponent,
     EntryComponent,
     SearchComponent,
-    SignupComponent
+    SignupComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,
