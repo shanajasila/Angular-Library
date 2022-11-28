@@ -23,15 +23,15 @@
                 <h3 class="text-center">Administrator Login</h3>
                 <div class="col- col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">User Name</label>
-                    <input type="text" class="form-control">
+                    <input name="username" [(ngModel)]="username" type="text" class="form-control">
                 </div>
                 <div class="col- col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Password</label>
-                    <input type="text" class="form-control">
+                    <input name="Password" [(ngModel)]="Password" type="text" class="form-control">
 
                 </div>
                 <div class="col- col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <button class="btn btn-success" routerLink="/add">Login</button>
+                    <button (click)="log()" class="btn btn-success" routerLink="/add">Login</button>
                  </div>
                  <div class="col- col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
                     <a routerLink="/signup">User Registration</a>
