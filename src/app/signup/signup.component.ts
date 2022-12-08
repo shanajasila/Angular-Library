@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-signup',
@@ -7,18 +8,38 @@ import { Component } from '@angular/core';
 })
 export class SignupComponent {
   name=""
-  adhaarNumber=""
-  adress=""
-  Pincode=""
+  adhaar=""
+  address=""
+  pincode=""
   dob=""
   email=""
-  PhoneNumber=""
+  phoneno=""
   username=""
-  Password=""
-  confirmPassword=""
+  password=""
+  confirmpassword=""
+
+  constructor(private api:ApiService){}
   sign=()=>{
-    let up={"name":this.name,"adhaarNumber":this.adhaarNumber,"adress":this.adress,"Pincode":this.Pincode,"dob":this.dob,"email":this.email,
-  "phoneNumber":this.PhoneNumber,"username":this.username,"Password":this.Password,"confirmPassword":this.confirmPassword}
+    let up={"name":this.name,"adhaar":this.adhaar,"adress":this.address,"pincode":this.pincode,"dob":this.dob,"email":this.email,
+  "phoneno":this.phoneno,"username":this.username,"password":this.password,"confirmpassword":this.confirmpassword}
   console.log(up)
+
+  this.api.userregister(up).subscribe(
+    (response:any)=>{
+      console.log(response)
+
+      if(this.password==this.confirmpassword){
+        alert("User Registerd successfully")
+        this.name=""
+        this.address=""
+        this.email=""
+        this.phoneno=""
+        this.password=""
+        this.confirmpassword=""
+      }else{
+        alert("something went wrong")
+      }
+    }
+  )
   }
 }

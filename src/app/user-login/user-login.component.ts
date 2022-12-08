@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-user-login',
@@ -7,20 +8,28 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-login.component.css']
 })
 export class UserLoginComponent {
-  Username=""
-  Password=""
-  constructor(private route:Router){}
-  login=()=>{
-    let data={
-      "Password":this.Password,"Username":this.Username }
-      console.log(data)
+  username=""
+  password=""
+  searchuser:any=[]
 
-      if(data.Username=="user"&&data.Password=="1234"){
-        this.route.navigate(["/add"])
-      }
-      else{
-        alert("Invalid Credentials")
-      }
-  }
+  constructor(private api:ApiService,private route:Router){}
+  readvalue=()=>{
+    let data={"username":this.username,"password":this.password}
+    console.log(data)
+    this.api.userlogin(data).subscribe(
+      (response:any)=>{
+        console.log(response)
+        if(response.length==0){
+          alert("Invalid username or password")
+          this.username=""
+          this.password=""
+        }
+        else{
+          this.searchuser=response;
+          this.route.navigate(['/searchlogin'])
+        }
+     }
+    )
+}
 
 }
