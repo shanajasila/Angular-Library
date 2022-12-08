@@ -6,11 +6,11 @@
                 <h2 class="text-center"><u>Book Entry</u></h2>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Book Title</label>
-                    <input name="title" [(ngModel)]="title" type="text" class="form-control">
+                    <input name="booktitle" [(ngModel)]="booktitle" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Author</label>
-                    <input name="Author" [(ngModel)]="Author" type="text" class="form-control">
+                    <input name="author" [(ngModel)]="author" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Description</label>
@@ -38,7 +38,7 @@
                 </div> --> -->
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Image Upload</label>
-                    <input type="file" name="image" [(ngModel)]="image" id="" class="form-control">
+                    <input type="text" name="image" [(ngModel)]="image" id="" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
                     <button  (click)="entrys()" class="btn btn-success">Add Book</button>

@@ -3,15 +3,17 @@
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3 mt-4">
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of data">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let j of data">
 
                     <div class="card h-100">
-                        <img height="200px" width="200px" src="{{i.image}}"class="card-img-top" alt="...">
+                        <img height="100px" width="500px" src="{{j.image}}"class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title text-center">{{i.title}}
-                          </h5>
-                          <p class="class-card-title ">{{i.description}}</p>
-                          <a href="#" class="btn btn-primary">Buy Now</a>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item" style="font-weight: 700;">{{j.booktitle}}</li>
+                                <li class="list-group-item">{{j.author}}</li>
+                                <li class="list-group-item">{{j.description}}</li>
+                                <a  class="btn btn-primary">Buy Now</a>
+                              </ul>
                         </div>
                     </div>
 
