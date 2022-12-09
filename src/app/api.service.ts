@@ -23,6 +23,10 @@ export class ApiService {
     return this.http.post("http://localhost:8080/signin",dataTosend)
   }
   deleteBook=(dataTosend:any)=>{
-    return this.http.post("http://localhost:8080/delete",dataTosend)
+    return this.http.post("http://localhost:8080/deletebook",dataTosend)
   }
-}
+  issuebook=(dataTosend:any)=>{
+      return this.http.post("",dataTosend)
+    }
+  }
+

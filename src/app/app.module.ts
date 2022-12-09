@@ -14,6 +14,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { EditComponent } from './edit/edit.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { IssueComponent } from './issue/issue.component';
 
 const myRoute:Routes=[
   {
@@ -42,6 +43,10 @@ const myRoute:Routes=[
   {
     path:"edit",
     component:EditComponent
+  },
+  {
+    path:"issue",
+    component:IssueComponent
   }
 ]
 
@@ -55,7 +60,8 @@ const myRoute:Routes=[
     SignupComponent,
     ViewComponent,
     NavBarComponent,
-    EditComponent
+    EditComponent,
+    IssueComponent
   ],
   imports: [
     BrowserModule,
