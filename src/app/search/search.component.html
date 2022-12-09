@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <h1 class="text-center" style="color:#323773;font-size:xx-large; line-height: 1.5;font-size: 40px;" >Search Book</h1>
+            <h3 class="text-center top"style="color:#323773;line-height: 1.5;font-size: 40px;top: 8px;">Search Book</h3>
             <div class="row g-3 mt-4">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Book Title</label>
@@ -22,11 +22,12 @@
                                 <li class="list-group-item">{{j.author}}</li>
                                 <li class="list-group-item">{{j.description}}</li>
                                 <a  class="btn btn-primary">Buy Now</a>
+                                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center g-3 pt-4">
+                                    <button (click)="deleteClick(j.id)" class="btn btn-danger ">Delete</button>
+                                </div>
                               </ul>
                         </div>
-                    </div>
-                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                        <button (click)="deleteClick(j.id)" class="btn btn-danger">Delete</button>
+                        
                     </div>
                 </div>
             </div>
